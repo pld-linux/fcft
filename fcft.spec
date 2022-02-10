@@ -41,6 +41,12 @@ checked.
 Summary:	Header files for the fcft library
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	fontconfig-devel
+Requires:	freetype-devel >= 2
+Requires:	harfbuzz-devel
+Requires:	libutf8proc-devel
+Requires:	pixman-devel
+Requires:	tllist-devel >= 1.0.1
 
 %description devel
 Header files for the fcft library.
