@@ -1,17 +1,17 @@
 Summary:	A simple library for font loading and glyph rasterization
 Name:		fcft
-Version:	3.0.1
+Version:	3.1.1
 Release:	1
 License:	MIT
 Group:		Development/Libraries
 Source0:	https://codeberg.org/dnkl/fcft/archive/%{version}.tar.gz
-# Source0-md5:	0e6edeb8bd86184b57cfeb3c74362126
+# Source0-md5:	db1b163271cc76eb62cf187bce4b7a4e
 URL:		https://codeberg.org/dnkl/fcft
 BuildRequires:	fontconfig-devel
-BuildRequires:	freetype-devel >= 2
+BuildRequires:	freetype-devel >= 2.12.0
 BuildRequires:	harfbuzz-devel
 BuildRequires:	libutf8proc-devel
-BuildRequires:	meson >= 0.54.0
+BuildRequires:	meson >= 0.58.0
 BuildRequires:	ninja
 BuildRequires:	pixman-devel
 BuildRequires:	pkgconfig
@@ -20,6 +20,7 @@ BuildRequires:	scdoc
 BuildRequires:	tllist-devel >= 1.0.1
 BuildRequires:	wayland-devel
 BuildRequires:	wayland-protocols
+Requires:	freetype >= 2.12.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
