@@ -1,11 +1,11 @@
 Summary:	A simple library for font loading and glyph rasterization
 Name:		fcft
-Version:	3.1.4
+Version:	3.1.5
 Release:	1
 License:	MIT
 Group:		Development/Libraries
 Source0:	https://codeberg.org/dnkl/fcft/archive/%{version}.tar.gz
-# Source0-md5:	f57b382a551f6f9eb3bd21d73d51e467
+# Source0-md5:	f57290538af51bc4936897d633b8f38e
 URL:		https://codeberg.org/dnkl/fcft
 BuildRequires:	fontconfig-devel
 BuildRequires:	freetype-devel >= 2.12.0
