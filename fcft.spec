@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# static library
+
 Summary:	A simple library for font loading and glyph rasterization
 Name:		fcft
 Version:	3.1.6
@@ -64,7 +68,8 @@ Static fcft library.
 %setup -q -n %{name}
 
 %build
-%meson build
+%meson build \
+	%{!?with_static_libs:--default-library=shared}
 
 %ninja_build -C build
 
@@ -94,6 +99,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_pkgconfigdir}/fcft.pc
 %{_mandir}/man3/fcft_*.3*
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libfcft.a
+%endif
