@@ -8,8 +8,8 @@ Version:	3.1.10
 Release:	1
 License:	MIT
 Group:		Development/Libraries
-Source0:	https://codeberg.org/dnkl/fcft/archive/%{version}.tar.gz
-# Source0-md5:	8460a52041114561431d2a3f4ebb3763
+Source0:	https://codeberg.org/dnkl/fcft/releases/download/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	31ee61346fbfa9a9867182a4bf0ddd64
 URL:		https://codeberg.org/dnkl/fcft
 BuildRequires:	fontconfig-devel
 BuildRequires:	freetype-devel >= 2.12.0
@@ -65,7 +65,7 @@ Requires:	%{name}-devel = %{version}-%{release}
 Static fcft library.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
 %meson build \
