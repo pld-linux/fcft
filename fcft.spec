@@ -19,7 +19,7 @@ BuildRequires:	meson >= 0.58.0
 BuildRequires:	ninja
 BuildRequires:	pixman-devel
 BuildRequires:	pkgconfig
-BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	scdoc
 BuildRequires:	tllist-devel >= 1.0.1
 BuildRequires:	wayland-devel
@@ -68,15 +68,15 @@ Static fcft library.
 %setup -q
 
 %build
-%meson build \
+%meson \
 	%{!?with_static_libs:--default-library=shared}
 
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%ninja_install -C build
+%meson_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
